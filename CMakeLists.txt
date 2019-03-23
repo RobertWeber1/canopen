@@ -45,6 +45,7 @@ add_executable( ${PROJECT_NAME}-test EXCLUDE_FROM_ALL
 	${SOURCES}
 	tests/catch.cc
 	tests/version.cc
+	tests/sdo/to_string.cc
 	tests/od.cc
 )
 
