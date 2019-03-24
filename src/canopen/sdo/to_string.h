@@ -89,6 +89,8 @@ char const* to_string(AbortCode abort_code)
 		case AbortCode::NoDataAvailable:
 			return "No data available";
 	}
+
+	return "UnknownAbortCode";
 }
 
 
