@@ -51,5 +51,16 @@ add_executable( ${PROJECT_NAME}-test EXCLUDE_FROM_ALL
 )
 
 target_link_libraries( ${PROJECT_NAME}-test
+	PRIVATE asan
+	PRIVATE ubsan
 	PRIVATE ${PROJECT_NAME}
+)
+
+target_compile_options( ${PROJECT_NAME}-test
+	PRIVATE -Wall
+	PRIVATE -Wextra
+	PRIVATE -Werror
+	PRIVATE -fsanitize=address
+	PRIVATE -fsanitize=undefined
+	PRIVATE -std=c++11
 )
