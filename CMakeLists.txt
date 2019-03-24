@@ -46,6 +46,7 @@ add_executable( ${PROJECT_NAME}-test EXCLUDE_FROM_ALL
 	tests/catch.cc
 	tests/version.cc
 	tests/sdo/to_string.cc
+	tests/bit_field.cc
 	tests/od.cc
 )
 
