@@ -1,5 +1,5 @@
 #include "catch.h"
-#include <od.h>
+#include <canopen/object_dictionary.h>
 
 template<class T>
 constexpr T max(T a, T b)

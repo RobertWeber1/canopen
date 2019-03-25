@@ -1,3 +1,6 @@
+#include <canopen/type_traits.h>
+#include <canopen/od/access_type.h>
+#include <canopen/od/index_type.h>
 #include <tuple>
 #include <algorithm>
 #include <stdint.h>
@@ -6,14 +9,8 @@
 namespace canopen
 {
 
-
-template<uint16_t INDEX, class TYPE>
-struct Entry
+namespace od
 {
-	using base_type = TYPE;
-	static constexpr uint16_t index = INDEX;
-};
-
 
 
 template<class LAST = void>
@@ -29,7 +26,6 @@ constexpr size_t max_buffer_size()
 }
 
 
-
 template<class ... ENTRIES>
 struct ObjectDictionay : ENTRIES ...
 {
@@ -39,5 +35,7 @@ struct ObjectDictionay : ENTRIES ...
 	}
 };
 
+
+} //namespace od
 
 } //namespace canopen
